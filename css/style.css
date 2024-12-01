@@ -1,0 +1,87 @@
+:root {
+  --main-color: #9746cd;
+  --primary-color: #792797;
+  --gray-color: #eee;
+}
+body {
+  font-family: "Poppins", serif;
+  background: var(--gray-color);
+}
+.form-control:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(167, 39, 226, 0.286);
+}
+.visit-btn {
+  background-color: var(--main-color);
+  color: #fff;
+  transition: all 0.5s;
+}
+.visit-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+header {
+  min-height: 100vh;
+  background-color: var(--gray-color);
+  padding: 60px;
+  overflow: auto;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  position: relative;
+  color: #444;
+  z-index: 999;
+  width: fit-content;
+  margin-inline: auto;
+  overflow: hidden;
+  font-size: 45px;
+}
+
+header h1::before {
+  position: absolute;
+  content: "";
+  width: 93%;
+  height: 30%;
+  background-color: rgba(167, 39, 226, 0.559);
+  z-index: -1;
+  transition: all 0.35s;
+  bottom: 10px;
+  transition: all 0.5s;
+}
+
+header h1:hover::before {
+  height: 60%;
+}
+h2 {
+  font-family: "Righteous", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 30%,
+    var(--primary-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#submitBtn {
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-border-color: var(--main-color);
+  --bs-btn-hover-bg: var(--primary-color);
+  --bs-btn-hover-border-color: var(--primary-color);
+  --bs-btn-active-bg: var(--main-color);
+  --bs-btn-active-border-color: var(--main-color);
+  transition: all 0.5s;
+  width: 12%;
+}
+.table-active {
+  --bs-table-bg-state: #9746cdce;
+  --bs-table-color-state: #fff;
+  border-top-left-radius: 8px;
+}
+.btn-sm {
+  --bs-btn-padding-y: 0.05rem;
+  --bs-btn-padding-x: 1rem;
+}
