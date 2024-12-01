@@ -11,10 +11,26 @@ var linkIndex;
 // All links will push here:
 var linksData = [];
 
+//  set to Local Storage:
+function setLocalStorage() {
+  localStorage.setItem("links", JSON.stringify(linksData));
+}
+
+//  check and get Local Storage:
+function checkLocalStorage() {
+  if (localStorage.getItem("links") != null) {
+    linksData = JSON.parse(localStorage.getItem("links"));
+    displayLinks(linksData);
+  } else {
+    checkLinksData();
+  }
+}
+
 // check local storage:
 checkLocalStorage();
 
 // Check the links data array if it is empty hide it:
+checkLinksData();
 function checkLinksData() {
   if (linksData.length === 0) {
     tableData.classList.add("d-none");
@@ -22,7 +38,6 @@ function checkLinksData() {
     tableData.classList.remove("d-none");
   }
 }
-checkLinksData();
 
 function validateInputs(input) {
   // check if the input id:
@@ -84,6 +99,7 @@ function addLink() {
   displayLinks(linksData);
   updateInputsValue();
   setLocalStorage();
+  checkLinksData();
   Swal.fire({
     title: "Great work!",
     text: "You've successfully added a bookmark.",
@@ -114,18 +130,6 @@ function displayLinks(arr) {
         `;
   }
   tableContent.innerHTML = linksBox;
-}
-
-//  set to Local Storage:
-function setLocalStorage() {
-  localStorage.setItem("links", JSON.stringify(linksData));
-}
-//  check and get Local Storage:
-function checkLocalStorage() {
-  if (localStorage.getItem("links") != null) {
-    linksData = JSON.parse(localStorage.getItem("links"));
-    displayLinks(linksData);
-  }
 }
 
 // update inputs value:
