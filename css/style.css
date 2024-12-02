@@ -2,6 +2,11 @@
   --main-color: #9746cd;
   --primary-color: #792797;
   --gray-color: #eee;
+  --light-color: #fff;
+}
+::selection {
+  background-color: #9746cd95;
+  color: var(--light-color);
 }
 body {
   font-family: "Poppins", serif;
@@ -14,12 +19,12 @@ body {
 }
 .visit-btn {
   background-color: var(--main-color);
-  color: #fff;
+  color: var(--light-color);
   transition: all 0.5s;
 }
 .visit-btn:hover {
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--light-color);
 }
 header {
   min-height: 100vh;
@@ -77,14 +82,14 @@ h2 {
   width: 12%;
 }
 #UpdateBtn {
-  --bs-btn-color: #fff;
+  --bs-btn-color: var(--light-color);
   --bs-btn-hover-color: #fff;
   --bs-btn-active-color: #fff;
   width: 12%;
 }
 .table-active {
   --bs-table-bg-state: #9746cdce;
-  --bs-table-color-state: #fff;
+  --bs-table-color-state: var(--light-color);
   border-top-left-radius: 8px;
 }
 .btn-sm {
