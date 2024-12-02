@@ -76,6 +76,12 @@ h2 {
   transition: all 0.5s;
   width: 12%;
 }
+#UpdateBtn {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  width: 12%;
+}
 .table-active {
   --bs-table-bg-state: #9746cdce;
   --bs-table-color-state: #fff;
